@@ -1,0 +1,2 @@
+# gestione-ospedaliera
+L’idea del progetto nasce da un’esigenza dei moderni ospedali. La mancanza di posti letto, la lentezza dei processi manuali e le lunghe attese dei pazienti ci hanno ispirato nella realizzazione di questo applicativo web semplice ed intuitivo, con il principale scopo di rendere la gestione ospedaliera più efficiente e performante, specialmente in un difficile periodo di pandemia.
