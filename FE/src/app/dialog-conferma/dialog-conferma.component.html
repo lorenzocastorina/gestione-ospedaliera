@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Attenzione</h2>
+
+<mat-dialog-content>
+  <p *ngIf="data.stato ==='pronto'" >Sicuro di voler ricoverare il paziente?
+    Verrà messo nel primo letto disponibile
+  </p>
+  <p *ngIf="data.stato === 'ricovero'">Sicuro di voler dimettere il paziente?
+    Verranno comunque salvati i suoi dati e messi dentro l'archivio
+  </p>
+  <p *ngIf="data.stato === 'eliminazione'">Sicuro di voler eliminare i dati del paziente?
+    Una volta eliminati dal sistema non sarà più possibile recuperarli
+  </p>
+
+  <p *ngIf="data.stato === 'pronto2'">Sicuro di voler dimettere il paziente?
+    Verranno comunque salvati i suoi dati e messi dentro l'archivio
+  </p>
+
+  <p *ngIf="data.stato === 'errore'">Qualcosa è andato storto, attendere qualche minuto e riprovare. <br>
+    Se dovessere ripresentarsi l'errore contattare l'amministratore
+  </p>
+  <p *ngIf="data.stato === 'errore2'">Il paziente con codice fiscale: {{data.paziente.cf}} è gia presente nella struttura ospedaliera<br>
+  </p>
+  <p *ngIf="data.stato === 'errore3'">Il paziente con codice fiscale: {{data.paziente.cf}} è ancora presente nella struttura ospedaliera.<br>
+    Prima di poterne eliminare i dati è necessario eseguire la procedura di dimmissione
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button *ngIf="data.stato ==='pronto'" mat-raised-button color="warn" [mat-dialog-close]="data" >Ricovera</button>
+  <button *ngIf="data.stato === 'ricovero'" mat-raised-button color="warn" [mat-dialog-close]="data" >Dimetti</button>
+  <button *ngIf="data.stato === 'pronto2'" mat-raised-button color="warn" [mat-dialog-close]="data" >Dimetti</button>
+  <button *ngIf="data.stato === 'eliminazione'" mat-raised-button color="warn" [mat-dialog-close]="data" >Elimina dati</button>
+  <button mat-raised-button  [mat-dialog-close]="null" >Annulla</button>
+</mat-dialog-actions>

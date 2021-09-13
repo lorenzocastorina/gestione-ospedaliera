@@ -1,0 +1,125 @@
+
+.background {
+  height: calc(100% - 150px);
+
+  padding-top: 100px;
+
+
+
+}
+
+.box {
+  height: 35rem;
+  width: 25rem;
+  background-color: rgba(255, 255, 255, 0.85);
+
+  backdrop-filter: blur(8px);
+
+
+  float: right;
+
+  margin-right: 150px;
+
+  border-radius: 5px;
+  position: relative;
+
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:    0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+box-shadow:         0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 2rem;
+  padding-top: 50px;
+  font-weight: 500;
+
+}
+
+input, label, button {
+  display: block;
+
+
+}
+
+form div {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+form {
+  margin-top: 60px;
+}
+
+input {
+  margin-top: 5px;
+  height: 40px;
+  width: 300px;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #eee;
+  border-radius: 2px;
+
+  padding-left: 10px;
+
+}
+
+input:focus {
+  border: 1px solid #999;
+}
+
+label {
+  margin-top: 30px;
+  color: #555;
+}
+
+p {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  color: #555;
+  font-size: 0.7rem;
+  margin-left: 30px;
+}
+
+a {
+  color: #033366;
+}
+
+button {
+  border: none;
+  height: 40px;
+  width: 90px;
+  margin-top: 80px;
+  background-color: #033366;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  opacity: 90%;
+  color: #fff;
+  border-radius: 2px;
+  outline:none;
+}
+
+
+
+
+button:active{
+  background-color: #033366;
+  opacity: 100%;
+}
+
+.error {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 320px;
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 30px;
+}

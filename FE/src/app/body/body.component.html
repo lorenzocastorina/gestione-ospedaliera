@@ -1,0 +1,85 @@
+<div class="col offset">
+
+  <div class="listaPazienti">
+    <mat-list role="list">
+      <mat-list-item  class="pointer" (click)="onRowClicked(paziente)" role="listitem" *ngFor="let paziente of lista_pazienti">
+        <div >
+          <span>{{paziente.nome}} {{paziente.cognome}}</span>
+        </div>
+
+        <span class="mid">alle {{paziente.data_entrata |  date: 'H:mm il dd/M'}} </span>
+        <mat-icon [style.color]="paziente.codice">lens</mat-icon>
+
+
+
+      </mat-list-item>
+
+    </mat-list>
+  </div>
+
+  <div class="aggiungiPaziente">
+    <div class="bottone">
+
+      <button mat-button (click)="openDialog()">
+          <mat-icon>person_add</mat-icon>
+          <span>Aggiungi paziente manualmente</span>
+
+      </button>
+    </div>
+    <div class="divider"></div>
+    <div class="bottone">
+
+      <button mat-button (click)="openDialog2()">
+          <mat-icon>qr_code_scanner</mat-icon>
+          <span>Aggiungi paziente tramite scanner</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="visualizzaPaziente">
+
+    <div class="informazioniBase">
+
+      <div class="campi">
+        <div>
+          <mat-label>Nome:</mat-label>
+          <h3>{{this.paziente_corrente.nome}}</h3>
+        </div>
+
+        <div class="cognome">
+          <mat-label>Cognome:</mat-label>
+          <h3>{{this.paziente_corrente.cognome}}</h3>
+        </div>
+      </div>
+
+      <div class="campi1">
+        <div>
+          <mat-label>Orario entrata:</mat-label>
+
+          <h3>{{this.paziente_corrente.data_entrata | date: 'H:mm'}}</h3>
+
+          <mat-label>Codice:</mat-label>
+          <mat-icon *ngIf="this.paziente_corrente.codice !== '' " [style.color]="this.paziente_corrente.codice">lens</mat-icon>
+
+
+          <button *ngIf="this.paziente_corrente.codice !== '' " mat-raised-button color="warn" (click)="openDialog3()">Ricovera</button>
+          <button class="button2" *ngIf="this.paziente_corrente.codice !== '' " mat-raised-button  (click)="openDialog4()">Dimetti</button>
+        </div>
+
+        <div class="diagnosi">
+          <mat-label>Diagnosi:</mat-label>
+          <h3>{{this.paziente_corrente.diagnosi}}</h3>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+

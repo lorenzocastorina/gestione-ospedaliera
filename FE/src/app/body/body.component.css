@@ -1,0 +1,320 @@
+.listaPazienti {
+  float: left;
+  height: 80vh;
+  width: 30rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 50px;
+  /* margin-left: 50px; */
+
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:    0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+box-shadow:         0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+
+overflow: hidden;
+overflow-y: scroll;
+}
+
+mat-list-item div {
+  width: 60%;
+}
+
+.listaPazienti mat-icon {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.aggiungiPaziente {
+  float: right;
+
+  height: 15rem;
+  /* width: 40rem; */
+  width: calc(100% - 30rem - 50px);
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
+
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:    0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+box-shadow:         0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottone {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1150px) {
+  .bottone button {
+    width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .bottone button {
+    display: none;
+  }
+
+
+}
+
+
+.bottone button {
+  overflow: hidden;
+  height: 80%;
+  width: 80%;
+  color: #999;
+  /* padding-top: 80px; */
+
+}
+
+.bottone mat-icon {
+  color: #ccc;
+  /* font-size: 4rem; */
+  margin-right: 10px;
+
+}
+
+/*----------------------------------------------------------------------------*/
+
+.visualizzaPaziente img {
+  border-radius: 100%;
+}
+
+.visualizzaPaziente {
+  float: right;
+/* da gestire piu in la  */
+  height: 21.75rem;
+  /* width: 40rem; */
+  width: calc(100% - 30rem - 50px);
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
+
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:    0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+box-shadow:         0px 0px 10px 1px rgba(50, 50, 50, 0.25);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(100% - 200px);
+}
+
+.info span {
+  font-weight: normal;
+}
+
+.terzo p {
+  margin-right: 80px;
+}
+
+.info2 {
+  padding-top: 10px;
+  height: calc(100% - 200px);
+  width: 200px;
+  display: block;
+  padding-left: 5px;
+}
+
+.info p mat-icon {
+  vertical-align: middle;
+  margin-left: 5px;
+  font-size: 0.85rem;
+}
+
+.info2 p {
+  padding-left: 5px;
+
+}
+
+.info2 p, .info2 button {
+  display: block;
+  font-weight: bold;
+
+}
+
+
+.info mat-icon {
+  color: #999;
+  font-size: 1rem;
+  height: 1rem;
+}
+
+.terzo span {
+  font-weight: lighter;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-right: 0 10px;
+}
+
+
+
+.primo {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: calc(100% - 100px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.secondo {
+  margin-top: 40px;
+  margin-left: 30px;
+  width: calc(100% - 200px);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.terzo {
+  margin-top: 40px;
+  margin-left: 30px;
+  width: calc(100% - 30px);
+}
+
+.info p {
+  display: inline;
+  font-weight: bold;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+
+
+.col {
+  box-sizing: border-box;
+  width: 90%;
+}
+
+.offset {
+  margin-left: 5%;
+}
+
+.divider {
+  width: 1px;
+  height: 13rem;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.m5l {
+  margin-left: 5vw;
+
+}
+
+
+
+/* --------------------------------------------------------------------------------- */
+
+
+
+
+
+.informazioniBase {
+  width: 90%;
+  height: fit-content;
+  display: block;
+
+}
+
+.campi div{
+  display: inline-block;
+  width: calc(50%);
+}
+
+.campi1 div {
+  display: inline-block;
+  width: calc(30%);
+  position: relative;
+  height: 177px;
+}
+
+.campi1 button {
+  position: absolute;
+  bottom: 0;
+}
+
+
+.diagnosi {
+  vertical-align:top;
+  width: calc(70%) !important;
+  float: right;
+}
+
+
+.diagnosi h3 {
+  height: 150px;
+  min-width: 87.5%;;
+  width: auto;
+
+
+
+}
+
+.campi2 div {
+  display: inline-block;
+  width: calc(100% / 1.25);
+}
+
+
+h3 {
+  height: 30px;
+  width: 80%;
+  outline: none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  margin-right: 0;
+
+}
+
+h3, mat-label, button {
+  display: block;
+
+}
+
+.cognome {
+  float: right !important;
+}
+
+.cognome h3 {
+  width: calc(80% + 8px)
+}
+
+.button2 {
+
+  left: 100px;
+}
+
+.pointer {
+  cursor:pointer;
+}

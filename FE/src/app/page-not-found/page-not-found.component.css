@@ -1,0 +1,29 @@
+.background {
+  height: calc(100% - 150px);
+  background: url("../../assets/img/notfound.jpg") no-repeat fixed center;
+  background-size: 100%;
+  padding-top: 100px;
+
+
+  position: relative;
+}
+
+.text {
+  width: 50vw;
+  position: absolute;
+  top: 30%;
+  text-align: center;
+}
+
+h1 {
+  line-height: 1.8;
+  letter-spacing: 10px;
+  font-size: 9.5rem;
+
+  font-weight: 300;
+}
+
+p {
+  font-size: 1rem;
+  letter-spacing: 4px;
+}

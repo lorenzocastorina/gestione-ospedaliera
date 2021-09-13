@@ -1,0 +1,24 @@
+<div class="background" [ngStyle]="bgStyle">
+  <div class="box">
+    <h1>Login</h1>
+    <form action="" method="" (ngSubmit)="login()">
+      <div>
+        <label for="">Nome utente</label>
+        <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone:true}">
+      </div>
+
+      <div>
+        <label for="">Password</label>
+        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone:true}">
+      </div>
+
+      <div class="error" *ngIf="error">Nome utente o Password non corretti</div>
+
+      <div>
+
+        <button type="submit">Entra</button>
+      </div>
+    </form>
+    <p>Se non riesci ad effettuare il LOGIN contatta l'assistenza <a href="mailto:lorenzo.castorina1@gmail.com?cc=andrea.potto99@gmail.com&subject=Richiesta%20recupero%20password">qui</a></p>
+  </div>
+</div>

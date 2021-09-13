@@ -1,0 +1,104 @@
+<h2 mat-dialog-title>Letto #{{data.letto.id}}</h2>
+
+<mat-dialog-content>
+
+  <mat-divider></mat-divider>
+
+  <div class="informazioniBase">
+
+    <div class="titolo">
+      <mat-label>
+        Informazioni del paziente
+      </mat-label>
+    </div>
+
+    <div class="campi2">
+
+      <div>
+        <mat-label>Cognome:</mat-label>
+        <h3>{{data.paziente.cognome}}</h3>
+      </div>
+
+    <div>
+      <mat-label>Luogo di nascita:</mat-label>
+      <h3> {{data.paziente.luogo_nascita}}</h3>
+    </div>
+    </div>
+
+    <div class="campi1">
+
+      <div>
+        <mat-label>Nome:</mat-label>
+        <h3>{{data.paziente.nome}}</h3>
+      </div>
+
+      <div>
+        <mat-label>Data di nascita:</mat-label>
+        <h3>{{data.paziente.data_nascita | date:"dd/MM/yyyy"}}</h3>
+    </div>
+
+
+
+      <div>
+        <mat-label>Sesso:</mat-label>
+        <h3 style="width: 20%;"> {{data.paziente.sesso}}</h3>
+      </div>
+    </div>
+
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="statoPaziente">
+    <div class="titolo">
+      <mat-label>
+        Stato del paziente
+      </mat-label>
+    </div>
+
+    <div class="campi4">
+      <div>
+        <mat-label>Diagnosi:</mat-label>
+        <h3 style="width: 90%; height: fit-content; min-height: 30px;">{{data.paziente.diagnosi}}</h3>
+      </div>
+
+      <div>
+        <mat-label>Data entrata:</mat-label>
+        <h3 style="width: 40%; height: fit-content; min-height: 30px;">{{data.paziente.data_entrata | date:"H:mm dd/MM/yyyy"}}</h3>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="modificaLetto">
+    <div class="titolo">
+      <mat-label>
+        Azioni
+      </mat-label>
+    </div>
+
+    <div class="campi6">
+
+      <div class="btn1">
+        <button mat-raised-button color="warn" [mat-dialog-close]="lettiNuovi" (click)="dimettiPaziente()">Dimetti paziente</button>
+      </div>
+    </div>
+
+    <div class="campi5">
+      <div class="btn2">
+        <button mat-raised-button [mat-dialog-close]="data" (click)="cambiaLetto(paziente_corrente, letto_corrente)">Cambia letto</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</mat-dialog-content>
+

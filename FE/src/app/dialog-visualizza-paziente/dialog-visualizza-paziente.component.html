@@ -1,0 +1,115 @@
+<h2 mat-dialog-title>Paziente #{{data.paziente.id}}</h2>
+<mat-dialog-content>
+
+  <mat-divider></mat-divider>
+
+  <div class="informazioniBase">
+
+    <div class="titolo">
+      <mat-label>
+        Informazioni
+      </mat-label>
+    </div>
+
+
+    <div class="campi2">
+
+      <div>
+        <mat-label>Cognome:</mat-label>
+        <h3>{{data.paziente.cognome}}</h3>
+      </div>
+
+    <div>
+      <mat-label>Luogo di nascita:</mat-label>
+      <h3> {{data.paziente.luogo_nascita}}</h3>
+    </div>
+
+
+
+    </div>
+
+    <div class="campi1">
+      <div>
+        <mat-label>Nome:</mat-label>
+        <h3>{{data.paziente.nome}}</h3>
+      </div>
+
+      <div>
+        <mat-label>Data di nascita:</mat-label>
+        <h3>{{data.paziente.data_nascita | date:"dd/MM/yyyy"}}</h3>
+    </div>
+
+    <div>
+      <mat-label>Codice fiscale:</mat-label>
+      <h3 style="width: 180%;">  {{data.paziente.cf}}</h3>
+    </div>
+
+    <div>
+      <mat-label>Sesso:</mat-label>
+      <h3 style="width: 20%;"> {{data.paziente.sesso}}</h3>
+    </div>
+
+
+
+
+
+    </div>
+
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="statoPaziente">
+    <div class="titolo">
+      <mat-label>
+        Stato
+      </mat-label>
+    </div>
+
+    <div class="campi4">
+      <div>
+        <mat-label>Attualmente:</mat-label>
+        <h3 style="width: 40%; height: fit-content; min-height: 30px;">{{data.paziente.stato}}</h3>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="documenti1">
+    <div class="titolo">
+      <mat-label>
+        Documenti
+      </mat-label>
+    </div>
+
+    <div class="campi6">
+
+      <div class="documentoBox" *ngFor="let documento of data.paziente.documenti">
+        <a href="#" (click)="apriPdf(documento.nome)" mat-button class="documento">{{documento.nome}}</a>
+      </div>
+
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="Altro">
+    <div class="titolo">
+      <mat-label>
+
+      </mat-label>
+    </div>
+  <div class="campi7">
+  <button mat-raised-button  style="float: left" [mat-dialog-close]="null" cdkFocusInitial >Annulla</button>
+  <button mat-button color="warn" style="float: left; margin-left: 10px;" (click)="conferma()" [mat-dialog-close]="data" cdkFocusInitial>Cancella dati</button>
+
+</div>
+
+</div>
+</mat-dialog-content>

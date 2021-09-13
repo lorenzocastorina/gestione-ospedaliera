@@ -1,0 +1,20 @@
+<div class="header">
+  <a href="/soccorso"><mat-icon>healing</mat-icon></a>
+
+
+
+
+
+
+  <div class="logout">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="redirect()">
+        <mat-icon>help_outline</mat-icon>
+        <span>Aiuto</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

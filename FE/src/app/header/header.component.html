@@ -1,0 +1,30 @@
+<div class="header">
+  <a href="/soccorso"><mat-icon>healing</mat-icon></a>
+
+
+
+
+  <div class="routing">
+
+    <button [ngStyle]="bt1" class="btn1" (click)="changeRoute('soccorso')">Soccorso</button>
+    <button [ngStyle]="bt2" class="btn2" (click)="changeRoute('stanze')">Stanze</button>
+    <button [ngStyle]="bt3" class="btn3" (click)="changeRoute('pazienti')">Pazienti</button>
+  </div>
+
+  <div class="logout">
+    <mat-label [ngStyle]="label" >Account: <span>{{user}}</span></mat-label>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="redirect()">
+        <mat-icon>help_outline</mat-icon>
+        <span>Aiuto</span>
+      </button>
+      <button [ngStyle]="bt4" mat-menu-item (click)="logout()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>

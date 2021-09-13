@@ -1,0 +1,254 @@
+
+
+.scanner {
+  width: 400px;
+}
+
+.risultato {
+  width: 400px;
+  height: 100px;
+  padding-top: 50px;
+}
+
+p {
+
+  font-weight: bold;
+  font-size: x-large;
+  text-align: center;
+}
+
+input, mat-label {
+  display: block;
+
+}
+
+mat-divider {
+  margin-bottom: 25px;
+}
+
+input {
+  height: 30px;
+  width: 80%;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+
+}
+
+mat-select {
+  width: 300px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+.informazioniBase {
+  width: 50vw;
+  height: 410px;
+  display: block
+}
+
+.titolo {
+  width: 33%;
+  font-weight: 900;
+  font-size: 1rem;
+  float: left;
+
+}
+
+.campi {
+  width: 66%;
+  float: right;
+
+}
+
+.codiceFiscale {
+  width: 50vw;
+  height: 150px;
+  display: block
+
+}
+
+.statoPaziente {
+  width: 50vw;
+  height: 200px;
+  display: block
+}
+
+
+
+
+mat-radio-button {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px
+}
+
+textarea {
+
+  width: 80%;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#date {
+  width: 40%;
+  float: left;
+}
+
+mat-datepicker-toggle {
+  float: left;
+}
+
+input, mat-label {
+  display: block;
+
+}
+
+mat-divider {
+  margin-bottom: 25px;
+}
+
+input {
+  height: 30px;
+  width: 80%;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+
+}
+
+mat-select {
+  width: 300px;
+  height: 30px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+.informazioniBase {
+  width: 50vw;
+  height: 410px;
+  display: block
+}
+
+.titolo {
+  width: 33%;
+  font-weight: 900;
+  font-size: 1rem;
+  float: left;
+
+}
+
+.campi {
+  width: 66%;
+  float: right;
+
+}
+
+.codiceFiscale {
+  width: 50vw;
+  height: 150px;
+  display: block
+
+}
+
+.statoPaziente {
+  width: 50vw;
+  height: 200px;
+  display: block
+}
+
+
+
+
+mat-radio-button {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 5px
+}
+
+textarea {
+
+  width: 80%;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#date {
+  width: 40%;
+  float: left;
+}
+
+mat-datepicker-toggle {
+  float: left;
+}
+
+::ng-deep{
+  .red{
+    .mat-radio-inner-circle  {
+      background-color: #c62828 !important;
+    }
+
+  }
+
+  .yellow{
+    .mat-radio-inner-circle  {
+      background-color: #fbc02d !important;
+    }
+
+  }
+
+  .green{
+    .mat-radio-inner-circle  {
+      background-color: #1e7d32 !important;
+    }
+
+  }
+
+  .grey{
+    .mat-radio-inner-circle  {
+      background-color: grey !important;
+    }
+
+  }
+
+  .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: grey !important;
+  }
+}

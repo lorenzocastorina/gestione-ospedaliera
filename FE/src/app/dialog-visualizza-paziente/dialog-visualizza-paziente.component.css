@@ -1,0 +1,222 @@
+img {
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+h2 {
+  margin-left: 5px;
+}
+
+.infoBox {
+  display: inline-flex;
+  vertical-align: top;
+  flex-direction: column;
+  height: 200px;
+}
+
+
+
+.diagnosi {
+  max-width: 500px;
+}
+
+p {
+  font-weight: bolder;
+  margin: auto 15px
+}
+
+.p {
+  margin: auto 0
+}
+
+p span {
+  font-weight: normal;
+}
+
+.diagnosi p {
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+p mat-icon {
+  font-size: 0.8rem;
+  vertical-align: middle;
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.documenti {
+  margin-bottom: 15px;
+}
+
+.documenti button {
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.documenti button span {
+  margin-right: 5px;
+}
+
+button:focus {outline:0;}
+
+.documenti mat-icon {
+  color: #999;
+  font-size: 1rem;
+  height: 1rem;
+}
+
+mat-divider {
+  margin: 15px 0;
+}
+
+mat-dialog-actions {
+  float: right;
+}
+h3, mat-label {
+  display: block;
+
+}
+
+mat-divider {
+  margin-bottom: 25px;
+}
+
+h3 {
+  height: 30px;
+  width: 80%;
+  outline:none;
+
+  border: 1px solid transparent;
+  transition: 0.4;
+  -webkit-transition: 0.4s;
+  background-color: #efefef;
+  border-radius: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+
+}
+
+.informazioniBase {
+  width: 50vw;
+overflow: auto;
+  display: block
+}
+
+.titolo {
+  width: 33%;
+  font-weight: 900;
+  font-size: 1rem;
+  float: left;
+
+}
+
+.campi {
+  width: 66%;
+  float: right;
+
+}
+
+.campiCf{
+  width: 66%;
+  float: right;
+}
+
+.campi1 {
+  width: 33%;
+  float: right;
+
+}
+
+.campi2 {
+  width: 33%;
+  float: right;
+
+}
+
+.campi3 {
+  width: 16%;
+  float: right;
+
+}
+.campi4 {
+  width: 66%;
+  float: right
+}
+
+.statoPaziente {
+  width: 50vw;
+  min-height: 70px;
+  height: fit-content;
+  display: block
+}
+
+
+.modificaLetto {
+  width: 50vw;
+  min-height: 150px;
+  display: block
+}
+
+
+.campi5 {
+  width: 33%;
+  float: right;
+
+}
+
+.campi6 {
+  width: 66%;
+  float: right;
+
+}
+
+.documenti1 {
+  width: 50vw;
+  overflow: hidden;
+  min-height: 30px;
+}
+
+
+.documento {
+  margin-bottom: 15px;
+  border: none;
+  color: #333;
+  background-color: #efefef;
+  width: fit-content;
+  height: 30px;
+  border-radius: 3px;
+  outline:none;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ddd;
+
+}
+
+.documentoBox {
+  display: inline;
+
+  margin-right: 10px;
+
+}
+
+.campi7 {
+  width: 100%;
+  float: left;
+}
+
+.Altro {
+  width: 50vw;
+  height: 50px;
+  display: block
+}
+

@@ -1,0 +1,162 @@
+
+<h2 mat-dialog-title>Scannerizza paziente</h2>
+<mat-dialog-content>
+
+    <zxing-scanner
+    *ngIf="data.paziente === null"
+    class="scanner"
+    [enable]="scannerEnabled"
+  (scanSuccess)="scanSuccessHandler($event)"
+  (scanFailure)="scanFailureHandler($event)"
+  >
+
+
+  </zxing-scanner>
+
+  <div class="risultato" *ngIf="data.paziente === null">
+    <p [ngStyle]="isTrovato">{{risultato}}</p>
+  </div>
+
+
+  <div  *ngIf="data.paziente !== null">
+
+
+    <form method="post" >
+      <mat-divider></mat-divider>
+
+      <div class="informazioniBase">
+
+        <div class="titolo">
+          <mat-label>
+            Informazioni di base
+          </mat-label>
+        </div>
+
+        <div class="campi">
+
+          <div>
+            <mat-label>Nome:
+              <div *ngIf="validate4.errors?.pattern" style="color: red; display: inline; margin-left: 10px;">
+                Nome non corretto
+              </div>
+            </mat-label>
+            <input (input)="checkVuoto(data.paziente.nome, 'nome')" matInput type="text" [(ngModel)]="data.paziente.nome" [ngModelOptions]="{standalone:true}" pattern="[a-zA-Z]+" #validate4='ngModel'>
+          </div>
+
+          <div>
+            <mat-label>Cognome:
+              <div *ngIf="validate5.errors?.pattern" style="color: red; display: inline; margin-left: 10px;">
+                Cognome non corretto
+              </div>
+            </mat-label>
+            <input (input)="checkVuoto(data.paziente.cognome, 'cognome')" matInput type="text" [(ngModel)]="data.paziente.cognome" [ngModelOptions]="{standalone:true}" pattern="[a-zA-Z]+" #validate5='ngModel'>
+          </div>
+
+          <div>
+            <mat-label>Sesso:</mat-label>
+            <mat-select placeholder="Non specificato..." class="sesso" [(ngModel)]="data.paziente.sesso" [ngModelOptions]="{standalone:true}">
+              <mat-option value="ND" selected>Non specificato...</mat-option>
+              <mat-option value="M">Maschio</mat-option>
+              <mat-option value="F">Femmina</mat-option>
+
+            </mat-select>
+          </div>
+
+
+
+          <div>
+            <mat-label>Luogo di nascita:</mat-label>
+            <mat-select placeholder="Non specificato..." [(ngModel)]="data.paziente.luogo_nascita" [ngModelOptions]="{standalone:true}">
+            <mat-option value="" selected  >Non specificato...</mat-option>
+            <mat-option *ngFor="let provincia of province_italiane" [value]="provincia">
+              {{provincia}}
+            </mat-option>
+            </mat-select>
+          </div>
+
+          <div>
+            <mat-label>Data di nascita:
+              <div *ngIf="!dataCorretta" style="color: red; display: inline; margin-left: 10px;">
+                Data di nascita non corretta
+              </div>
+            </mat-label>
+            <input [max]="todayDate" (dateChange)="checkVuoto(data.paziente.data_nascita, 'dataNascita')" (input)="controlloData($event.target.value)" id="date" matInput [matDatepicker]="picker" [(ngModel)]="data.paziente.data_nascita" [ngModelOptions]="{standalone:true}" >
+            <mat-datepicker-toggle matSuffix [for]="picker">
+              <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker startView="multi-year" ></mat-datepicker>
+          </div>
+
+        </div>
+
+      </div>
+
+      <mat-divider></mat-divider>
+
+
+      <div class="codiceFiscale">
+        <div class="titolo">
+          <mat-label>
+            Codice Fiscale
+          </mat-label>
+        </div>
+
+        <div class="campi">
+          <div>
+          <mat-label>Codice fiscale:
+            <div *ngIf="validate6.errors?.pattern" style="color: red; display: inline; margin-left: 10px;">
+              Codice fiscale non corretto
+            </div></mat-label>
+          <input (input)="checkVuoto(data.paziente.cf, 'cf')" matInput [(ngModel)]="data.paziente.cf" [ngModelOptions]="{standalone:true}" pattern="[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]" #validate6='ngModel'/>
+          </div>
+
+
+        <div>
+          <mat-label>Nazionalità:</mat-label>
+          <mat-select placeholder="Non specificato..." [(ngModel)]="data.paziente.nazionalita" [ngModelOptions]="{standalone:true}">
+          <mat-option value="" selected  >Non specificato...</mat-option>
+          <mat-option *ngFor="let nazionalita of lista_nazioni" [value]="nazionalita" >
+            {{nazionalita}}
+          </mat-option>
+          </mat-select>
+        </div>
+      </div>
+
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="statoPaziente">
+        <div class="titolo">
+          <mat-label>
+            Stato del paziente
+          </mat-label>
+        </div>
+
+        <div class="campi">
+          <div>
+            <mat-label>Codice:</mat-label>
+            <mat-radio-group aria-label="Seleziona un opzione" [(ngModel)]="data.paziente.codice" [ngModelOptions]="{standalone:true}">
+              <mat-radio-button class="red" style="color: #c62828" value="ROSSO">Rosso</mat-radio-button>
+              <mat-radio-button class="yellow" style="color: #fbc02d" value="GIALLO">Giallo</mat-radio-button>
+              <mat-radio-button class="green" style="color: #1e7d32" value="VERDE">Verde</mat-radio-button>
+              <mat-radio-button class="grey" style="color: grey" value="BIANCO" >Bianco</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+
+          <div>
+            <mat-label>Diagnosi:</mat-label>
+            <textarea rows = "7" cols = "60" [(ngModel)]="data.paziente.diagnosi" [ngModelOptions]="{standalone:true}" ></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button *ngIf="data.paziente !== null" mat-raised-button [mat-dialog-close]="data" [disabled]="vuoto || (!dataCorretta)">Aggiungi</button>
+  <button mat-raised-button color="warn" [mat-dialog-close]="null" >Annulla</button>
+</mat-dialog-actions>
+
