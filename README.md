@@ -4,7 +4,7 @@ L’idea del progetto nasce da un’esigenza dei moderni ospedali. La mancanza d
 ## Description
 
 Progetto nato per la tesi di laurea triennale in Ingegneria informatica del Politecnico di Milano. 
-Studenti: Lorenzo Castorina & Andrea Potì
+<br>Studenti: Lorenzo Castorina & Andrea Potì
 
 Dal punto di vista client-side, l’operatore potrà interfacciarsi tramite un portale web disponibile sui browser più comuni. Proprio per questo la decisione di utilizzare Angular (versione 9.0), framework open-source per la creazione di applicazioni web, è stata la più opportuna, non solo per la possibilità di comporre progetti di elevata complessità, ma anche per le performance che permettono di renderizzare questo software anche tramite una semplice finestra del browser. Inoltre la possibilità di utilizzare HTML5, CSS3 e TypeScript (linguaggio derivato da Javascript) rendono l’esperienza di programmazione tramite Angular ancora più intuitiva e semplice.
 
