@@ -15,30 +15,30 @@ La pagina di login possiede un tema “ospedaliero”, permettendo di eseguire l
 ![ScreenShot](/screenshots/4.jpg)
 ______________________________________________________________________________________________________________________________
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/1.jpg?raw=true)
+![ScreenShot](/screenshots/1.jpg?raw=true)
 
 La piattaforma si suddivide in poche pagine, ma funzionali. Nella prima, dopo che viene effettuato l’accesso, l’utente si troverà dinanzi ad una dashboard che, grazie ad Angular 9 ed alla sua tecnologia di presentazione dei dati, gli “observable”, sempre aggiornata ed in tempo reale, è in continua comunicazione con il server.
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/5.jpg?raw=true)
+![ScreenShot](/screenshots/5.jpg?raw=true)
 
 In questa sezione l’operatore avrà la possibilità di visualizzare le informazioni del paziente ricoverato, tra cui la diagnosi e la data di entrata, ma avrà anche la possibilità di cambiare letto al paziente qualora fosse necessario o di dimettere il paziente dalla clinica.
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/6.jpg?raw=true)
+![ScreenShot](/screenshots/6.jpg?raw=true)
 ______________________________________________________________________________________________________________________________
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/9.jpg?raw=true)
+![ScreenShot](/screenshots/9.jpg?raw=true)
 
 L’ultima schermata, ma non la meno importante, riguarda la visualizzazione dei pazienti. In questa sezione l’operatore avrà la possibilità di vedere TUTTI i pazienti, sia quelli attualmente in pronto soccorso, sia quelli in ricovero e infine quelli che sono stati dimessi.
 È possibile inoltre eseguire dei filtri che permettono all’operatore di semplificare le ricerche.
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/7.jpg?raw=true)
+![ScreenShot](/screenshots/7.jpg?raw=true)
 
 Infine l’applicazione è stata arricchita con delle features che rendono l’esperienza più piacevole e dinamica.
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/8.jpg?raw=true)
+![ScreenShot](/screenshots/8.jpg?raw=true)
 ______________________________________________________________________________________________________________________________
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/10.jpg?raw=true)
+![ScreenShot](/screenshots/10.jpg?raw=true)
 
 
 ## Installing
@@ -61,4 +61,4 @@ Per la procedura di installazione, far riferimento al file "**Documentazione ges
 
 Lorenzo Castorina & Andrea Potì
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/11.jpg?raw=true)
+![ScreenShot](/screenshots/11.jpg?raw=true)
