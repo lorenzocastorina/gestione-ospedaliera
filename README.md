@@ -12,7 +12,7 @@ Dal punto di vista server-side, si è scelto di utilizzare Spring Boot, un frame
 
 La pagina di login possiede un tema “ospedaliero”, permettendo di eseguire le operazioni classiche, come l’autenticazione, il recupero password e l’accesso alla pagina di supporto.
 
-![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/4.jpg?raw=true)
+![ScreenShot](/screenshots/4.jpg)
 ______________________________________________________________________________________________________________________________
 
 ![alt text](https://github.com/lorenzocastorina/gestione-ospedaliera/blob/master/screenshots/1.jpg?raw=true)
