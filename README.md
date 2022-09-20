@@ -57,8 +57,9 @@ Requisiti:
 
 Per la procedura di installazione, far riferimento al file "**Documentazione gestione ospedaliera**" presente all'interno della repository.
 
-## Credits
+## Collaborators
 
-Lorenzo Castorina & Andrea Potì
+- Lorenzo Castorina
+- Andrea Potì
 
 ![ScreenShot](/screenshots/11.jpg?raw=true)
